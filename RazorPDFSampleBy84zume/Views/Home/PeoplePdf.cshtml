@@ -1,0 +1,25 @@
+﻿﻿@model List<RazorPDFSampleBy84zume.Models.Person>
+@{
+    Layout = Layout = "~/Views/Shared/_PdfLayout.cshtml";
+}
+
+<paragraph>
+  <phrase>@ViewBag.Title</phrase>
+ </paragraph>
+ <table width="100%" widths="25;25;50" columns="3" borderwidth="1.0"
+  left="true" right="true" top="true" bottom="true">
+  <row>
+   <cell borderwidth="0.5" left="true" right="true" top="true" bottom="true">Name</cell>
+   <cell borderwidth="0.5" left="true" right="true" top="true" bottom="true">Age</cell>
+   <cell borderwidth="0.5" left="true" right="true" top="true" bottom="true">Address</cell>
+  </row>
+    @foreach (var item in @Model)
+    {
+    <row>
+        <cell borderwidth="0.5" left="true" right="true" top="true" bottom="true">@item.Name</cell>
+        <cell borderwidth="0.5" left="true" right="true" top="true" bottom="true">@item.Age</cell>
+        <cell borderwidth="0.5" left="true" right="true" top="true" bottom="true">@item.Address</cell>
+    </row>
+    }
+ </table>
+

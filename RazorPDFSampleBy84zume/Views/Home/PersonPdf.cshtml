@@ -1,0 +1,21 @@
+﻿﻿@model RazorPDFSampleBy84zume.Models.Person
+@{
+    Layout = "~/Views/Shared/_PdfLayout.cshtml";
+}
+
+<paragraph>
+  <phrase>@ViewBag.Title</phrase>
+ </paragraph>
+ <table width="100%" widths="25;25;50" columns="3" borderwidth="1.0"
+  left="true" right="true" top="true" bottom="true">
+  <row>
+   <cell borderwidth="0.5" left="true" right="true" top="true" bottom="true">Name</cell>
+   <cell borderwidth="0.5" left="true" right="true" top="true" bottom="true">Age</cell>
+   <cell borderwidth="0.5" left="true" right="true" top="true" bottom="true">Address</cell>
+  </row>
+  <row>
+   <cell borderwidth="0.5" left="true" right="true" top="true" bottom="true">@Model.Name</cell>
+   <cell borderwidth="0.5" left="true" right="true" top="true" bottom="true">@Model.Age</cell>
+   <cell borderwidth="0.5" left="true" right="true" top="true" bottom="true">@Model.Address</cell>
+  </row>
+ </table>
